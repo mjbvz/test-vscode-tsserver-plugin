@@ -8,9 +8,11 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
+            "env": {
+                "TSS_DEBUG": "9000"
+            },
             "stopOnEntry": false,
             "sourceMaps": true,
-            "outDir": "${workspaceRoot}/out/src",
             "preLaunchTask": "npm"
         },
         {
@@ -23,6 +25,18 @@
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/out/test",
             "preLaunchTask": "npm"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to TSServer",
+            "port": 9000
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Compound",
+            "configurations": ["Launch Extension", "Attach to TSServer"]
         }
     ]
 }

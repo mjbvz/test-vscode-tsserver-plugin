@@ -13,19 +13,19 @@
   "contributes": {
     "typescriptServerPlugins": [
       {
-        "name": "tslint-language-service"
+        "name": "tslint-language-service",
+        "languages": [
+          "html"
+        ]
       }
     ]
   },
-  "scripts": {
-    "postinstall": "node ./node_modules/vscode/bin/install"
-  },
   "devDependencies": {
-    "typescript": "^2.2.2",
     "vscode": "^1.0.0"
   },
   "dependencies": {
-    "tslint": "^4.1.0",
-    "tslint-language-service": "https://github.com/egamma/tslint-language-service.git"
+    "tslint": "^5.2.0",
+    "tslint-language-service": "^0.9.4",
+    "typescript": "^2.3.2"
   }
 }
